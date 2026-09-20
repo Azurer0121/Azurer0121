@@ -6,7 +6,7 @@
 # 👋 你好
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=520&lines=print “Hello World！" alt="个人介绍">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=520&lines=print “Hello World！“">
 </div>
 
 <div align="center">
