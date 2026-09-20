@@ -3,10 +3,10 @@
   <img src="assets/github-snake.svg" alt="Azurer0121 的 GitHub 贡献动态" width="100%">
 </div>
 
-# 👋 你好，我是 Azurer0121
+# 👋 你好
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=520&lines=专注于开发实用的开发者工具;探索+AI+工具链与桌面应用;让软件更简单、更好用" alt="个人介绍">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&vCenter=true&width=520&lines=print “Hello World！" alt="个人介绍">
 </div>
 
 <div align="center">
