@@ -1,0 +1,42 @@
+name: Profile assets
+
+on:
+  schedule:
+    # Daily at 03:17 UTC. Off-the-hour on purpose to avoid the cron thundering herd.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-assets
+  cancel-in-progress: false
+
+jobs:
+  contribution-snake:
+    name: Regenerate contribution snake
+    runs-on: ubuntu-latest
+    steps:
+      # Pinned to immutable commit SHAs; bump deliberately, never via floating tags.
+      - name: Check out the profile repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+
+      - name: Generate contribution snake SVG
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: assets/github-snake.svg
+
+      - name: Commit the refreshed asset
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- assets/github-snake.svg
+          if git diff --staged --quiet; then
+            echo "Contribution snake unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore(assets): refresh contribution snake [skip ci]"
+          git push

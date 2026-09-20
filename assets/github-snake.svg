@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150" width="100%" role="img" aria-labelledby="snakeTitle snakeDesc" style="max-width:100%;height:auto">
+  <title id="snakeTitle">Contribution snake placeholder</title>
+  <desc id="snakeDesc">Placeholder shown until the profile-assets workflow generates the real contribution snake</desc>
+
+  <defs>
+    <linearGradient id="phRule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#a78bfa" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#f472b6" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .label { fill: #8b949e; }
+      @media (prefers-color-scheme: light) {
+        .label { fill: #57606a; }
+      }
+    </style>
+  </defs>
+
+  <rect x="0" y="74" width="900" height="2" fill="url(#phRule)"/>
+  <text class="mono label" x="450" y="60" font-size="18" text-anchor="middle" letter-spacing="1">Contribution activity</text>
+  <text class="mono label" x="450" y="104" font-size="14" text-anchor="middle" letter-spacing="0.5">generated daily by .github/workflows/profile-assets.yml</text>
+</svg>
